@@ -26,6 +26,7 @@
     <modules>
         <module>../redm-eureka-server</module>
         <module>../redm-gateway</module>
+        <module>../redm-auth</module>
     </modules>
 
     <dependencyManagement>
@@ -36,6 +37,11 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
