@@ -19,3 +19,18 @@ eureka:
     # 服务端 url
     service-url:
       defaultZone: http://192.168.215.119:7181/eureka
+mybatis-plus:
+  configuration:
+    # 支持驼峰命名
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      # 逻辑删除字段
+      logic-delete-field: deleted
+      # 存在值
+      logic-not-delete-value: 0
+      # 删除值
+      logic-delete-value: 1
+  # xml 文件存储路径
+  mapper-locations: classpath:mapper/*.xml
