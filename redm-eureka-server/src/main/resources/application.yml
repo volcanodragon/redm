@@ -5,9 +5,9 @@ spring:
     name: redm-eureka-server
 eureka:
   client:
-    # \u662F\u5426\u6CE8\u518C
+    # 是否注册
     register-with-eureka: false
-    # \u662F\u5426\u62C9\u53D6\u6CE8\u518C\u8868
+    # 是否拉取注册表
     fetch-registry: false
     # 服务端 url
     service-url:
