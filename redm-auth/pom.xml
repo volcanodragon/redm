@@ -37,6 +37,10 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.cfc.redm</groupId>
+            <artifactId>redm-commons</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

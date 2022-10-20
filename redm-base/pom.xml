@@ -24,6 +24,7 @@
     </properties>
 
     <modules>
+        <module>../redm-commons</module>
         <module>../redm-eureka-server</module>
         <module>../redm-gateway</module>
         <module>../redm-auth</module>
@@ -42,6 +43,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>3.5.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.cfc.redm</groupId>
+                <artifactId>redm-commons</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

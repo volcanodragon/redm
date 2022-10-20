@@ -21,7 +21,8 @@ public class UserController {
     }
 
     @PostMapping
-    public void save(@RequestBody UserSaveDTO dto) {
+    public Result<Object> save(@RequestBody UserSaveDTO dto) {
         userService.save(dto);
+        return new Result<>().success();
     }
 }
