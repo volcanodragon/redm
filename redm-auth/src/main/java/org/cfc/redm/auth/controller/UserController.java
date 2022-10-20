@@ -2,6 +2,7 @@ package org.cfc.redm.auth.controller;
 
 import org.cfc.redm.auth.dto.UserSaveDTO;
 import org.cfc.redm.auth.service.UserService;
+import org.cfc.redm.commons.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,5 +24,4 @@ public class UserController {
     public void save(@RequestBody UserSaveDTO dto) {
         userService.save(dto);
     }
-
 }
