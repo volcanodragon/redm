@@ -66,4 +66,15 @@ public class Result <T> {
         this.setCode(ResultCode.FAIL.getCode()).setMessage(ResultCode.FAIL.getMessage());
         return this;
     }
+
+    /**
+     * 通过枚举构造
+     *
+     * @return Result<T>
+     */
+    public Result<T> buildByEnum(ResultCode resultCode) {
+        this.setCode(resultCode.getCode()).setMessage(resultCode.getMessage());
+        return this;
+    }
+
 }

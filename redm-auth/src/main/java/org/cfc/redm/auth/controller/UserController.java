@@ -25,4 +25,5 @@ public class UserController {
         userService.save(dto);
         return new Result<>().success();
     }
+
 }

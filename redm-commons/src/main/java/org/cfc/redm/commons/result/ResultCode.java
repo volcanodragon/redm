@@ -2,8 +2,12 @@ package org.cfc.redm.commons.result;
 
 public enum ResultCode {
 
-    SUCCESS(200, "success"),
-    FAIL(-1, "fail");
+    SUCCESS(2000, "success"),
+
+    FAIL(5000, "fail"),
+    LOGIN_FAIL(5001, "账号或者密码错误"),
+    NO_LOGIN(5002, "未登录"),
+    ACCESS_DENIED(5003, "无权访问");
 
     private final int code;
     private final String message;
@@ -20,4 +24,5 @@ public enum ResultCode {
     public String getMessage() {
         return message;
     }
+
 }
