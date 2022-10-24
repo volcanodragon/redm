@@ -1,7 +1,6 @@
-package org.cfc.redm.auth.domain;
+package org.cfc.redm.auth.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
@@ -30,10 +29,6 @@ public class User implements UserDetails {
      */
     private String nickname;
     /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
-    /**
      * 创建人id
      */
     private Integer creatorId;
@@ -42,9 +37,12 @@ public class User implements UserDetails {
      */
     private String creator;
     /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+    /**
      * 删除标识 0-存在 1-删除
      */
-    @TableLogic
     private Integer deleted;
 
     public Integer getId() {
@@ -81,14 +79,6 @@ public class User implements UserDetails {
         this.nickname = nickname;
     }
 
-    public LocalDateTime getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
-    }
-
     public Integer getCreatorId() {
         return creatorId;
     }
@@ -103,6 +93,14 @@ public class User implements UserDetails {
 
     public void setCreator(String creator) {
         this.creator = creator;
+    }
+
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
     }
 
     public Integer getDeleted() {

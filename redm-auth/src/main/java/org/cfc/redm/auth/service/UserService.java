@@ -1,9 +1,10 @@
 package org.cfc.redm.auth.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import org.cfc.redm.auth.domain.User;
 import org.cfc.redm.auth.dto.UserSaveDTO;
+import org.cfc.redm.auth.entity.User;
 import org.cfc.redm.auth.mapper.UserMapper;
+import org.cfc.redm.auth.userdetails.CompleteUserInfoBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -44,7 +45,7 @@ public class UserService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("user:" + username + " does not exist");
         }
-        return user;
+        return CompleteUserInfoBuilder.build(user);
     }
 
 }
