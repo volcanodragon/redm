@@ -23,5 +23,4 @@ public class PermissionService {
     public List<String> getListByUsername(String username) {
         return permissionMapper.selectListByUsername(username);
     }
-
 }

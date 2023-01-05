@@ -5,7 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Set;
 
-public class CompleteUserInfo extends User {
+public class CurrentUser extends User {
 
     private final Set<GrantedAuthority> authorities;
 
@@ -17,7 +17,7 @@ public class CompleteUserInfo extends User {
 
     private final boolean enabled;
 
-    public CompleteUserInfo(Set<GrantedAuthority> authorities, boolean accountNonExpired,
+    public CurrentUser(Set<GrantedAuthority> authorities, boolean accountNonExpired,
                             boolean accountNonLocked, boolean credentialsNonExpired, boolean enabled) {
         this.authorities = authorities;
         this.accountNonExpired = accountNonExpired;

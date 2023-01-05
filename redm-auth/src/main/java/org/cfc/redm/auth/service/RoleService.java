@@ -17,5 +17,4 @@ public class RoleService {
     public boolean isSuperAdmin(String username) {
         return roleMapper.selectSuperAdminByUsername(username) == 1;
     }
-
 }

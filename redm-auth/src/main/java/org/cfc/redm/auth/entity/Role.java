@@ -93,5 +93,4 @@ public class Role {
     public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
-
 }

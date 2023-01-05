@@ -1,6 +1,5 @@
 package org.cfc.redm.auth.entity;
 
-
 import com.baomidou.mybatisplus.annotation.TableId;
 import org.springframework.stereotype.Repository;
 
@@ -94,5 +93,4 @@ public class Permission {
     public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
-
 }

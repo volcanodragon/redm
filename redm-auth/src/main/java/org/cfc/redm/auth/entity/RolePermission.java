@@ -43,5 +43,4 @@ public class RolePermission {
     public void setPermissionId(Integer permissionId) {
         this.permissionId = permissionId;
     }
-
 }

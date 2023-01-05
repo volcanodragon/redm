@@ -24,5 +24,4 @@ public interface PermissionMapper extends BaseMapper<Permission> {
      * @return List<String>
      */
     List<String> selectAll();
-
 }

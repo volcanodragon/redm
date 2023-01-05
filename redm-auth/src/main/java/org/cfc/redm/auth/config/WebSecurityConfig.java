@@ -50,5 +50,4 @@ public class WebSecurityConfig {
                 .csrf().disable();
         return http.build();
     }
-
 }
