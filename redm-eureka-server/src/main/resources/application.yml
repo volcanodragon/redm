@@ -5,10 +5,10 @@ spring:
     name: redm-eureka-server
 eureka:
   client:
-    # 是否注册
+    # 不注册到注册中心
     register-with-eureka: false
-    # 是否拉取注册表
+    # 不拉取注册表
     fetch-registry: false
-    # 服务端 url
+    # 注册中心地址
     service-url:
       defaultZone: http://192.168.215.119:7181/eureka

@@ -1,0 +1,41 @@
+server:
+  port: 9622
+spring:
+  profiles:
+    include: data
+  application:
+    name: redm-auth
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${datasource-url}
+    username: ${datasource-username}
+    password: ${datasource-password}
+  main:
+    # 允许覆盖bean定义
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    # 注册到注册中心
+    register-with-eureka: true
+    # 拉取注册表
+    fetch-registry: true
+    # 注册中心地址
+    service-url:
+      defaultZone: http://192.168.215.119:7181/eureka
+mybatis-plus:
+  configuration:
+    # 开启驼峰命名匹配
+    map-underscore-to-camel-case: true
+    # 开启日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      # 逻辑删除字段
+      logic-delete-field: deleted
+      # 逻辑未删除值
+      logic-not-delete-value: 0
+      # 逻辑已删除值
+      logic-delete-value: 1
+  # mapper.xml存储位置映射
+  mapper-locations: classpath:mapper/*.xml
