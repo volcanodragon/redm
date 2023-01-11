@@ -20,7 +20,13 @@ public class PermissionService {
         return permissionMapper;
     }
 
-    public List<String> getListByUsername(String username) {
+    /**
+     * 获取列表
+     *
+     * @param username 用户名
+     * @return List<String>
+     */
+    public List<String> getList(String username) {
         return permissionMapper.selectListByUsername(username);
     }
 }

@@ -24,6 +24,7 @@
     </properties>
 
     <modules>
+        <module>../redm-framework</module>
         <module>../redm-commons</module>
         <module>../redm-eureka-server</module>
         <module>../redm-gateway</module>
@@ -39,30 +40,43 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.2</version>
+                <groupId>org.cfc.redm</groupId>
+                <artifactId>redm-framework</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.cfc.redm</groupId>
                 <artifactId>redm-commons</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.2</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>2.13.4</version>
+                <version>2.14.1</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>2.13.4.2</version>
+                <version>2.14.1</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>2.13.4</version>
+                <version>2.14.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>2.14.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

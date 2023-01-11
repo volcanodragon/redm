@@ -2,7 +2,7 @@ package org.cfc.redm.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
-import org.cfc.redm.auth.entity.Permission;
+import org.cfc.redm.framework.security.entity.Permission;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 public interface PermissionMapper extends BaseMapper<Permission> {
 
     /**
-     * 通过用户名查询权限列表
+     * 查询列表
      *
      * @param username 用户名
      * @return List<String>

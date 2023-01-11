@@ -1,12 +1,14 @@
-package org.cfc.redm.auth.entity;
+package org.cfc.redm.framework.security.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 
 @Repository
-public class Permission {
+public class Role {
 
     /**
      * id
@@ -14,24 +16,27 @@ public class Permission {
     @TableId(value = "id")
     private Integer id;
     /**
-     * 权限编码
+     * 角色编码
      */
     private String code;
     /**
-     * 权限名
+     * 角色名
      */
     private String name;
     /**
      * 创建人id
      */
+    @TableField(fill = FieldFill.INSERT)
     private Integer creatorId;
     /**
      * 创建人姓名
      */
+    @TableField(fill = FieldFill.INSERT)
     private String creator;
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
     /**
      * 删除标识 0-存在 1-删除

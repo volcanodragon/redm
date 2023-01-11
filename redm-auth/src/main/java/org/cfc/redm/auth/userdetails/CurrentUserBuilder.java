@@ -1,13 +1,13 @@
 package org.cfc.redm.auth.userdetails;
 
-import org.cfc.redm.auth.entity.User;
 import org.cfc.redm.auth.service.PermissionService;
 import org.cfc.redm.auth.service.RoleService;
+import org.cfc.redm.framework.security.entity.User;
+import org.cfc.redm.framework.security.userdetails.CurrentUser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -36,13 +36,19 @@ public class CurrentUserBuilder {
         CurrentUserBuilder.roleService = roleServiceBean;
     }
 
-    public static UserDetails build(User user) {
+    /**
+     * 构建CurrentUser对象
+     *
+     * @param user 用户信息
+     * @return CurrentUser
+     */
+    public static CurrentUser build(User user) {
         List<String> permissions;
-        // 如果是超级管理员则获取所有权限
+        // 超级管理员获取全部权限
         if (roleService.isSuperAdmin(user.getUsername())) {
             permissions = permissionService.getBaseMapper().selectAll();
         } else {
-            permissions = permissionService.getListByUsername(user.getUsername());
+            permissions = permissionService.getList(user.getUsername());
         }
         var permissionArr = new String[permissions.size()];
         permissions.toArray(permissionArr);

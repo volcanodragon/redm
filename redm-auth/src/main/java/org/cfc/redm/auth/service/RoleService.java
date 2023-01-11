@@ -14,7 +14,13 @@ public class RoleService {
         this.roleMapper = roleMapper;
     }
 
-    public boolean isSuperAdmin(String username) {
-        return roleMapper.selectSuperAdminByUsername(username) == 1;
+    /**
+     * 是否是超级管理员
+     *
+     * @param username 用户名
+     * @return Boolean
+     */
+    public Boolean isSuperAdmin(String username) {
+        return roleMapper.selectIsSuperAdminByUsername(username);
     }
 }

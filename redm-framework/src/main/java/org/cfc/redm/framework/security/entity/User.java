@@ -1,5 +1,7 @@
-package org.cfc.redm.auth.entity;
+package org.cfc.redm.framework.security.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,14 +33,17 @@ public class User implements UserDetails {
     /**
      * 创建人id
      */
+    @TableField(fill = FieldFill.INSERT)
     private Integer creatorId;
     /**
      * 创建人姓名
      */
+    @TableField(fill = FieldFill.INSERT)
     private String creator;
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
     /**
      * 删除标识 0-存在 1-删除

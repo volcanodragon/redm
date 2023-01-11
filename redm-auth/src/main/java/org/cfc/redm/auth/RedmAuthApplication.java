@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @MapperScan
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.cfc.redm.framework", "org.cfc.redm.auth"})
 public class RedmAuthApplication {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package org.cfc.redm.auth.userdetails;
+package org.cfc.redm.framework.security.userdetails;
 
-import org.cfc.redm.auth.entity.User;
+import org.cfc.redm.framework.security.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Set;

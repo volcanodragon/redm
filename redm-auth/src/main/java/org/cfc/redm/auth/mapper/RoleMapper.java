@@ -2,17 +2,17 @@ package org.cfc.redm.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
-import org.cfc.redm.auth.entity.Role;
+import org.cfc.redm.framework.security.entity.Role;
 import org.springframework.stereotype.Component;
 
 @Component
 public interface RoleMapper extends BaseMapper<Role> {
 
     /**
-     * 通过用户名查询超级管理员角色数量
+     * 查询是否是超级管理员
      *
      * @param username 用户名
-     * @return int
+     * @return Boolean
      */
-    int selectSuperAdminByUsername(@Param("username") String username);
+    Boolean selectIsSuperAdminByUsername(@Param("username") String username);
 }

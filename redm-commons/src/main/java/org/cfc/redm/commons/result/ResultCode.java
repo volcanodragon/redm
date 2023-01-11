@@ -3,7 +3,6 @@ package org.cfc.redm.commons.result;
 public enum ResultCode {
 
     SUCCESS(2000, "success"),
-
     FAIL(5000, "fail"),
     LOGIN_FAIL(5001, "账号或者密码错误"),
     NO_LOGIN(5002, "未登录"),

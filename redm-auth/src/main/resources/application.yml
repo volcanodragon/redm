@@ -10,29 +10,32 @@ spring:
     url: ${datasource-url}
     username: ${datasource-username}
     password: ${datasource-password}
+  main:
+    # 允许覆盖bean定义
+    allow-bean-definition-overriding: true
 eureka:
   client:
-    # 是否注册
+    # 注册到注册中心
     register-with-eureka: true
-    # 是否拉取注册表
+    # 拉取注册表
     fetch-registry: true
-    # 服务端 url
+    # 注册中心地址
     service-url:
       defaultZone: http://192.168.215.119:7181/eureka
 mybatis-plus:
   configuration:
-    # 支持驼峰命名
+    # 开启驼峰命名匹配
     map-underscore-to-camel-case: true
-    # 打印日志
+    # 开启日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:
       id-type: auto
       # 逻辑删除字段
       logic-delete-field: deleted
-      # 存在值
+      # 逻辑未删除值
       logic-not-delete-value: 0
-      # 删除值
+      # 逻辑已删除值
       logic-delete-value: 1
-  # xml 文件存储路径
+  # mapper.xml存储位置映射
   mapper-locations: classpath:mapper/*.xml

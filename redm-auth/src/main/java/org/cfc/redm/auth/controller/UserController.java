@@ -25,11 +25,11 @@ public class UserController {
      * 保存用户
      *
      * @param dto 用户数据
-     * @return Result<Object>
+     * @return Result<?>
      */
     @PostMapping
     @PreAuthorize("hasAuthority('user:save')")
-    public Result<Object> save(@RequestBody UserSaveDTO dto) {
+    public Result<?> save(@RequestBody UserSaveDTO dto) {
         userService.save(dto);
         return new Result<>().success();
     }
